@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DRAFT — Updates #s4 &amp; #s5</title>
+<base target="_blank">
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; margin: 0; color: #222; background: #f9f9f9; }
+  .page { display: flex; max-width: 1100px; margin: 40px auto; padding: 0 20px; gap: 0; }
+
+  .sidebar { width: 180px; flex-shrink: 0; position: sticky; top: 40px; align-self: flex-start; padding-right: 20px; }
+  .sidebar h4 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #999; margin: 0 0 8px 0; }
+  .sidebar a { display: block; padding: 5px 10px; font-size: 13px; color: #1a3a5c; text-decoration: none; border-left: 3px solid #e0e0e0; margin-bottom: 2px; }
+  .sidebar a:hover { border-left-color: #1a3a5c; background: #eef2f7; }
+
+  .main { flex: 1; min-width: 0; background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 28px 32px; }
+
+  h1 { font-size: 20px; color: #1a3a5c; margin: 0 0 4px 0; }
+  .draft-banner { background: #fff3cd; border: 1px solid #ffc107; border-radius: 6px; padding: 10px 16px; font-size: 13px; color: #856404; margin-bottom: 24px; }
+  .last-updated { font-size: 12px; color: #aaa; margin-bottom: 28px; }
+  .divider { border: none; border-top: 1px solid #eee; margin: 0 0 24px 0; }
+
+  .board { border: 1px solid #d0d8e4; border-radius: 6px; padding: 22px 26px; margin-bottom: 20px; background: #fafcff; scroll-margin-top: 40px; }
+  .board h3 { font-size: 15px; color: #1a3a5c; margin: 0 0 4px 0; }
+  .entry-meta { font-size: 12px; color: #666; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid #dde3eb; }
+  .sub-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: #222; font-weight: 600; margin: 20px 0 8px 0; }
+  .sub-label::before { content: "• "; }
+  .update-img { max-width: 100%; border: 1px solid #dde3eb; border-radius: 4px; display: block; }
+  .section-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #999; margin: 28px 0 12px 0; }
+
+  p { margin: 10px 0; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; }
+  th, td { border: 1px solid #bbb; padding: 8px 12px; text-align: left; vertical-align: middle; }
+  th { background-color: #f0f0f0; font-weight: bold; }
+  tr:nth-child(even) td { background: #f4f4f4; }
+
+  .row-added td { background: #e6f4ea !important; }
+
+  .pending-img { background: #f5f5f5; border: 1px dashed #ccc; border-radius: 4px; padding: 20px; text-align: center; font-size: 13px; color: #999; font-style: italic; }
+
+  blockquote { margin: 12px 0; padding: 10px 16px; border-left: 3px solid #d0d8e4; background: #f4f7fb; color: #444; font-style: italic; }
+
+  footer { margin-top: 32px; font-size: 11px; color: #bbb; text-align: right; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <aside class="sidebar">
+    <h4>Draft</h4>
+    <a href="#update-s4" target="_self">Update #s4</a>
+    <a href="#update-s5" target="_self">Update #s5</a>
+  </aside>
+
+  <div class="main">
+
+    <h1>DRAFT — Proposed Updates #s4 &amp; #s5</h1>
+    <p class="last-updated">For review only — not yet published</p>
+
+    <div class="draft-banner">
+      ⚠️ Working draft for Henry's review. Once confirmed, replace HTML tables / quoted text with screenshots and merge into plus-en.html.
+    </div>
+
+    <hr class="divider">
+
+    <p class="section-label">Standard Updates</p>
+
+    <!-- ─── s4 ─── -->
+    <div class="board" id="update-s4">
+      <h3>Update #s4 — Common Removal Order Situations: FN Overstaying / Non-compliance → Exclusion Order (not Departure Order)</h3>
+      <p class="entry-meta">
+        Section 3.7 — Removal Orders &nbsp;|&nbsp; Table: Common Removal Order Situations &nbsp;|&nbsp; Updated: 2026-09-01 &nbsp;|&nbsp; Thanks to: Jackelin
+      </p>
+
+      <p class="sub-label">Original Content</p>
+      <img src="images/s4_original.png" alt="Original: first row shows Departure Order for overstaying and non-compliance" class="update-img">
+
+      <p class="sub-label">Updated Content</p>
+      <img src="images/s4_updated.png" alt="Updated: table split into separate rows for departure and exclusion orders" class="update-img">
+
+      <p class="sub-label">What Changed</p>
+      <p>
+        The original first row grouped four situations under a single <strong>Departure Order</strong>. Two of those situations are incorrect for foreign nationals:
+        <a href="https://laws-lois.justice.gc.ca/eng/regulations/sor-2002-227/section-228.html">IRPR 228(1)(c)(iv)</a> specifies an <strong>exclusion order</strong> for a foreign national who fails to leave Canada by the end of their authorized period (overstaying), and
+        <a href="https://laws-lois.justice.gc.ca/eng/regulations/sor-2002-227/section-228.html">IRPR 228(1)(c)(v)</a> specifies an <strong>exclusion order</strong> for failing to comply with conditions of temporary residence (including work and study authorization).
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th colspan="3" style="text-align:center; background:#FFC000; color:#000;">Common Removal Order Situations — Proposed Updated Layout</th>
+          </tr>
+          <tr>
+            <th>Situation</th>
+            <th>Issuer</th>
+            <th>Removal Order</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Residency Obligation Breach (PR); Failed Refugee Claim</td>
+            <td>MD</td>
+            <td>Departure Order</td>
+          </tr>
+          <tr class="row-added">
+            <td>Overstaying; Working/Studying without permit (FN); Failure to appear for further examination; Failure to establish identity</td>
+            <td>MD</td>
+            <td>Exclusion Order (1 Year)</td>
+          </tr>
+          <tr>
+            <td>Misrepresentation</td>
+            <td>MD</td>
+            <td>Exclusion Order (5 years)</td>
+          </tr>
+          <tr>
+            <td>Criminality Inadmissibility (In Canada)</td>
+            <td>MD</td>
+            <td rowspan="4">Deportation Order</td>
+          </tr>
+          <tr>
+            <td>Serious Criminality Inadmissibility (In Canada)</td>
+            <td>ID</td>
+          </tr>
+          <tr>
+            <td>Criminality Inadmissibility (Outside Canada)</td>
+            <td>ID</td>
+          </tr>
+          <tr>
+            <td>Security Inadmissibility</td>
+            <td>ID</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ─── s5 ─── -->
+    <div class="board" id="update-s5">
+      <h3>Update #s5 — Conditional Removal Order: "effective immediately" → comes into force per IRPA s.49(2)</h3>
+      <p class="entry-meta">
+        Section 2.4 — IRB &nbsp;|&nbsp; Table: Outcome of RPD Decision &nbsp;|&nbsp; Updated: 2026-09-01 &nbsp;|&nbsp; Thanks to: Jackelin
+      </p>
+
+      <p class="sub-label">Original Content</p>
+      <img src="images/s5_original.png" alt="Original: order is effective immediately upon the RPD decision" class="update-img">
+
+      <p class="sub-label">Updated Content</p>
+      <img src="images/s5_updated.png" alt="Updated: conditional removal order comes into force per IRPA s.49(2)" class="update-img">
+
+      <p class="sub-label">What Changed</p>
+      <p>
+        "Effective immediately upon the RPD decision" is inaccurate.
+        <a href="https://laws-lois.justice.gc.ca/eng/acts/i-2.5/section-49.html">IRPA s.49(2)</a> sets out when a conditional removal order comes into force — the timing is never immediate upon the RPD decision:
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Scenario</th>
+            <th>Order comes into force</th>
+            <th>Authority</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>RPD rejects claim — <strong>no right of appeal</strong></td>
+            <td>15 days after notice of rejection</td>
+            <td>s.49(2)(c)</td>
+          </tr>
+          <tr>
+            <td>RPD rejects claim — <strong>appeal right exists, but claimant does not file and perfect appeal</strong></td>
+            <td>The <em>later</em> of: day after the appeal time limit expires, and 15 days after notice of rejection</td>
+            <td>s.49(2)(d)</td>
+          </tr>
+          <tr>
+            <td>RAD dismisses appeal</td>
+            <td>15 days after notice of RAD rejection</td>
+            <td>s.49(2)(e)</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Proposed replacement text:</p>
+      <blockquote>
+        If protection is denied, the conditional removal order comes into force per <a href="https://laws-lois.justice.gc.ca/eng/acts/i-2.5/section-49.html">IRPA s.49(2)</a> — not immediately. Timing depends on appeal rights: 15 days after RPD rejection if no right of appeal; or after the appeal period expires if no appeal is filed.
+      </blockquote>
+    </div>
+
+    <footer>DRAFT — for Henry's review only &nbsp;·&nbsp; 2026-09-01</footer>
+  </div>
+
+</div>
+</body>
+</html>
