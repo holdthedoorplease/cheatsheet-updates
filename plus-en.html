@@ -50,6 +50,11 @@
   tr:nth-child(even) td { background: #f4f4f4; }
 
   footer { margin-top: 32px; font-size: 11px; color: #bbb; text-align: right; }
+
+  .title-row { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 4px; }
+  .title-row h1 { margin: 0; }
+  .contact-btn { flex-shrink: 0; margin-left: 16px; padding: 6px 14px; font-size: 12px; font-weight: 600; color: #1a3a5c; background: #fff; border: 1.5px solid #1a3a5c; border-radius: 5px; text-decoration: none; white-space: nowrap; line-height: 1.4; }
+  .contact-btn:hover { background: #eef2f7; }
 </style>
 </head>
 <body>
@@ -68,8 +73,11 @@
 
   <div class="main">
 
-    <h1>Updates of THE EPE CHEATSHEET (Plus Edition)</h1>
-    <p class="last-updated">Last updated: 2026-09-01</p>
+    <div class="title-row">
+      <h1>Updates of THE EPE CHEATSHEET (Plus Edition)</h1>
+      <a class="contact-btn" href="https://shop.holdthedoor.ca/pages/contact">Contact Us</a>
+    </div>
+    <p class="last-updated"><span style="color: #222;">Oct 2026 Edition</span> &nbsp;|&nbsp; Last updated: 2026-09-01</p>
 
     <div class="toc">
       <h2>Table of Contents</h2>
