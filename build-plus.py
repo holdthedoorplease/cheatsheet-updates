@@ -46,8 +46,8 @@ def update_last_updated(html, date):
     return LAST_UPDATED_RE.sub(rf'\g<1>{date}', html)
 
 docs = Path(__file__).parent
-standard_path = docs / 'standard-en.html'
-plus_src_path  = docs / 'plus-source.html'
+standard_path = docs / 'en-standard.html'
+plus_src_path  = docs / 'en-only-mcq.html'
 
 standard = standard_path.read_text(encoding='utf-8')
 plus_src  = plus_src_path.read_text(encoding='utf-8')
@@ -58,15 +58,15 @@ if latest:
     updated_plus_src  = update_last_updated(plus_src,  latest)
     if updated_standard != standard:
         standard_path.write_text(updated_standard, encoding='utf-8')
-        print(f'Updated standard-en.html → Last updated: {latest}')
+        print(f'Updated en-standard.html → Last updated: {latest}')
     if updated_plus_src != plus_src:
         plus_src_path.write_text(updated_plus_src, encoding='utf-8')
-        print(f'Updated plus-source.html → Last updated: {latest}')
+        print(f'Updated en-mcq.html → Last updated: {latest}')
     standard = updated_standard
     plus_src  = updated_plus_src
 
 blocks = extract_blocks(standard)
 result = inject_blocks(plus_src, blocks)
 
-(docs / 'plus-en.html').write_text(result, encoding='utf-8')
-print(f'Built plus-en.html ({len(blocks)} blocks: {", ".join(blocks)})')
+(docs / 'en-plus.html').write_text(result, encoding='utf-8')
+print(f'Built en-plus.html ({len(blocks)} blocks: {", ".join(blocks)})')
