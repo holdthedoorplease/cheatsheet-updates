@@ -70,9 +70,3 @@ result = inject_blocks(plus_src, blocks)
 
 (docs / 'en-plus.html').write_text(result, encoding='utf-8')
 print(f'Built en-plus.html ({len(blocks)} blocks: {", ".join(blocks)})')
-
-# Sync public-facing files (Shopify embeds these URLs)
-import shutil
-shutil.copy(docs / 'en-standard.html', docs / 'standard-en.html')
-shutil.copy(docs / 'en-plus.html',     docs / 'plus-en.html')
-print('Synced standard-en.html and plus-en.html')
