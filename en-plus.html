@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Updates of THE EPE CHEATSHEET (Plus Edition)</title>
+<base target="_blank">
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; margin: 0; color: #222; background: #f9f9f9; }
+  .page { display: flex; max-width: 1100px; margin: 40px auto; padding: 0 20px; gap: 0; }
+
+  .sidebar { width: 180px; flex-shrink: 0; position: sticky; top: 40px; align-self: flex-start; padding-right: 20px; }
+  .sidebar h4 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #999; margin: 0 0 8px 0; }
+  .sidebar h4.section { margin-top: 16px; }
+  .sidebar a { display: block; padding: 5px 10px; font-size: 13px; color: #1a3a5c; text-decoration: none; border-left: 3px solid #e0e0e0; margin-bottom: 2px; }
+  .sidebar a:hover { border-left-color: #1a3a5c; background: #eef2f7; }
+  .sidebar .empty { font-size: 12px; color: #ccc; font-style: italic; padding: 4px 10px; margin: 0; }
+
+  .main { flex: 1; min-width: 0; background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 28px 32px; }
+
+  h1 { font-size: 20px; color: #1a3a5c; margin: 0 0 4px 0; }
+  .last-updated { font-size: 12px; color: #aaa; margin-bottom: 28px; }
+  .toc { margin-bottom: 28px; }
+  .toc h2 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.07em; color: #999; margin: 0 0 10px 0; border-bottom: 1px solid #eee; padding-bottom: 6px; }
+  .toc h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: #bbb; margin: 14px 0 6px 0; }
+  .toc ul { margin: 0; padding: 0; list-style: none; }
+  .toc li { padding: 4px 0 4px 12px; border-left: 2px solid #e0e0e0; margin-bottom: 2px; }
+  .toc li a { font-size: 13px; color: #1a3a5c; text-decoration: none; }
+  .toc li a:hover { text-decoration: underline; }
+  .toc .empty { font-size: 13px; color: #ccc; font-style: italic; padding-left: 12px; }
+  .divider { border: none; border-top: 1px solid #eee; margin: 0 0 24px 0; }
+
+  .board { border: 1px solid #d0d8e4; border-radius: 6px; padding: 22px 26px; margin-bottom: 20px; background: #fafcff; scroll-margin-top: 40px; }
+  .board.plus-only { border-color: #d4c8a0; background: #fffdf5; }
+  .board h3 { font-size: 15px; color: #1a3a5c; margin: 0 0 4px 0; }
+  .entry-meta { font-size: 12px; color: #666; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid #dde3eb; }
+  .page-ref { color: #222; font-weight: bold; }
+  .badge { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: bold; background: #d4edda; color: #155724; }
+  .sub-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: #222; font-weight: 600; margin: 20px 0 8px 0; }
+  .sub-label::before { content: "• "; }
+  .update-img { max-width: 100%; border: 1px solid #dde3eb; border-radius: 4px; display: block; }
+
+  .section-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #999; margin: 28px 0 12px 0; }
+
+  p { margin: 10px 0; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; }
+  th, td { border: 1px solid #bbb; padding: 8px 12px; text-align: left; vertical-align: middle; }
+  th { background-color: #f0f0f0; font-weight: bold; }
+  tr:nth-child(even) td { background: #f4f4f4; }
+
+  footer { margin-top: 32px; font-size: 11px; color: #bbb; text-align: right; }
+
+  .title-row { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 4px; }
+  .title-row h1 { margin: 0; }
+  .contact-btn { flex-shrink: 0; margin-left: 16px; padding: 6px 14px; font-size: 12px; font-weight: 600; color: #1a3a5c; background: #fff; border: 1.5px solid #1a3a5c; border-radius: 5px; text-decoration: none; white-space: nowrap; line-height: 1.4; }
+  .contact-btn:hover { background: #eef2f7; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <aside class="sidebar">
+    <h4>Standard</h4>
+    <!-- BEGIN_S_SIDEBAR -->
+    <a href="#update-s1" target="_self">Update #s1</a>
+    <a href="#update-s2" target="_self">Update #s2</a>
+    <a href="#update-s3" target="_self">Update #s3</a>
+    <a href="#update-s4" target="_self">Update #s4</a>
+    <a href="#update-s5" target="_self">Update #s5</a>
+    <a href="#update-s6" target="_self">Update #s6</a>
+    <a href="#update-s7" target="_self">Update #s7</a>
+    <a href="#update-s8" target="_self">Update #s8</a>
+    <!-- END_S_SIDEBAR -->
+    <h4 class="section">Plus Only</h4>
+    <a href="#update-p1" target="_self">Update #p1</a>
+    <a href="#update-p2" target="_self">Update #p2</a>
+    <a href="#update-p3" target="_self">Update #p3</a>
+    <a href="#update-p4" target="_self">Update #p4</a>
+  </aside>
+
+  <div class="main">
+
+    <div class="title-row">
+      <h1>Updates of THE EPE CHEATSHEET (Plus Edition)</h1>
+      <a class="contact-btn" href="https://shop.holdthedoor.ca/pages/contact">Contact Us</a>
+    </div>
+    <p class="last-updated"><span style="color: #222;">Oct 2026 Edition</span> &nbsp;|&nbsp; Last updated: 2026-10-01</p>
+
+    <div class="toc">
+      <h2>Table of Contents</h2>
+      <h3>Standard</h3>
+      <ul>
+        <!-- BEGIN_S_TOC -->
+        <li><a href="#update-s1" target="_self">Update #s1 — Serious Criminality sentence threshold: ≥6 months → &gt;6 months</a></li>
+        <li><a href="#update-s2" target="_self">Update #s2 — Reporting Change of Info: 30 Days / s.40 → 15 Days / Reg. s.3.1</a></li>
+        <li><a href="#update-s3" target="_self">Update #s3 — Abuse of Discretion: 3 sub-bullets missing after "such as:"</a></li>
+        <li><a href="#update-s4" target="_self">Update #s4 — Common Removal Order Situations: FN Overstaying / Non-compliance → Exclusion Order (not Departure Order)</a></li>
+        <li><a href="#update-s5" target="_self">Update #s5 — Conditional Removal Order: "effective immediately" → comes into force per IRPA s.49(2)</a></li>
+        <li><a href="#update-s6" target="_self">Update #s6 — Perfect the Record deadline: 75 Days → 120 Days (June 2026 Special Order)</a></li>
+        <li><a href="#update-s7" target="_self">Update #s7 — eTA Expansion: Remove Qatar from visa-required country examples</a></li>
+        <li><a href="#update-s8" target="_self">Update #s8 — SOWP Table: rename "PA" to "Partner"; fix In-Canada Class trigger</a></li>
+        <!-- END_S_TOC -->
+      </ul>
+      <h3>Plus Only</h3>
+      <ul>
+        <li><a href="#update-p1" target="_self">Update #p1 — Q46 Explanation: removal order type corrected from deportation order to exclusion order</a></li>
+        <li><a href="#update-p2" target="_self">Update #p2 — Q26 Correct Answer: updated from C to D</a></li>
+        <li><a href="#update-p3" target="_self">Update #p3 — Q68: Fix sentence completion date and Option B threshold</a></li>
+        <li><a href="#update-p4" target="_self">Update #p4 — Q111: Revised question; correct answer updated from B to D</a></li>
+      </ul>
+    </div>
+
+    <hr class="divider">
+
+    <p class="section-label">Standard Updates</p>
+
+    <!-- BEGIN_S_ENTRIES -->
+    <div class="board" id="update-s1">
+      <h3>Update #s1 — Serious Criminality sentence threshold: ≥6 months → &gt;6 months</h3>
+      <p class="entry-meta"><span class="page-ref"></span> &nbsp;|&nbsp; Section 3.2 — Criminal Inadmissibility &nbsp;|&nbsp; Updated: 2026-08-20</p>
+
+      <p class="sub-label">Original Content</p>
+      <img src="images/s1_original.png" alt="Original: ≥6 months threshold" class="update-img">
+
+      <p class="sub-label">Updated Content</p>
+      <img src="images/s1_updated.png" alt="Updated: >6 months threshold" class="update-img">
+
+      <p class="sub-label">Explanation</p>
+      <p>The term <strong>Serious Criminality</strong> is used in two distinct contexts in IRPA, and the sentence threshold is <strong>very subtly different</strong> in each:</p>
+
+      <table>
+        <thead>
+          <tr><th colspan="4" style="text-align:center; background:#d9e1f2;">Serious Criminality — Threshold by Context</th></tr>
+          <tr>
+            <th>Context</th>
+            <th>Provision</th>
+            <th>Sentence threshold (in Canada)</th>
+            <th>Meaning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Inadmissibility</td>
+            <td><a href="https://laws-lois.justice.gc.ca/eng/acts/i-2.5/section-36.html">IRPA s. 36(1)(a)</a></td>
+            <td><strong>&gt; 6 months</strong></td>
+            <td>A sentence of exactly 6 months does NOT trigger inadmissibility for serious criminality</td>
+          </tr>
+          <tr>
+            <td>Loss of IAD appeal right</td>
+            <td><a href="https://laws-lois.justice.gc.ca/eng/acts/i-2.5/section-64.html">IRPA s. 64(2)</a></td>
+            <td><strong>≥ 6 months</strong></td>
+            <td>A sentence of exactly 6 months DOES strip the IAD appeal right</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>The key takeaway: A sentence of <strong>exactly 6 months</strong> sits in the gap — the person is not inadmissible for serious criminality under <a href="https://laws-lois.justice.gc.ca/eng/acts/i-2.5/section-36.html">IRPA s. 36(1)(a)</a>, but if they are inadmissible through the other limb (max ≥ 10 years), they also lose their IAD appeal right under <a href="https://laws-lois.justice.gc.ca/eng/acts/i-2.5/section-64.html">IRPA s. 64(2)</a>.</p>
+
+      <table>
+        <thead>
+          <tr><th colspan="4" style="text-align:center; background:#d9e1f2;">Serious Criminality — Scenario Examples</th></tr>
+          <tr>
+            <th>Max penalty</th>
+            <th>Actual sentence</th>
+            <th>Inadmissible for Serious Criminality? (<a href="https://laws-lois.justice.gc.ca/eng/acts/i-2.5/section-36.html">IRPA s. 36(1)(a)</a>)</th>
+            <th>Has IAD Appeal Right? (<a href="https://laws-lois.justice.gc.ca/eng/acts/i-2.5/section-64.html">IRPA s. 64(2)</a>)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="3">≥ 10 yrs</td>
+            <td>&lt; 6 months<br><em>(e.g. 3 months)</em></td>
+            <td>✅ Yes (max ≥10 yrs limb)</td>
+            <td>✅ Yes (s.64 not triggered)</td>
+          </tr>
+          <tr>
+            <td>= 6 months exactly</td>
+            <td>✅ Yes (max ≥10 yrs limb)</td>
+            <td>❌ No (≥6 months, s.64 strips appeal)</td>
+          </tr>
+          <tr>
+            <td>&gt; 6 months<br><em>(e.g. 7 months)</em></td>
+            <td>✅ Yes (both limbs)</td>
+            <td>❌ No (≥6 months, s.64 strips appeal)</td>
+          </tr>
+          <tr>
+            <td rowspan="3">&lt; 10 yrs</td>
+            <td>&lt; 6 months<br><em>(e.g. 3 months)</em></td>
+            <td>❌ No (neither limb met)</td>
+            <td>N/A (s.64 not engaged)</td>
+          </tr>
+          <tr>
+            <td>= 6 months exactly</td>
+            <td>❌ No (neither limb met)</td>
+            <td>N/A (s.64 not engaged)</td>
+          </tr>
+          <tr>
+            <td>&gt; 6 months<br><em>(e.g. 7 months)</em></td>
+            <td>✅ Yes (&gt;6 months limb)</td>
+            <td>❌ No (≥6 months, s.64 strips appeal)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="board" id="update-s2">
+      <h3>Update #s2 — Reporting Change of Info: 30 Days / s.40 → 15 Days / Reg. s.3.1</h3>
+      <p class="entry-meta"><span class="page-ref"></span> &nbsp;|&nbsp; Section 1.10 — Reporting Obligations &nbsp;|&nbsp; Updated: 2026-08-23</p>
+
+      <p class="sub-label">Original Content</p>
+      <img src="images/s2_original.png" alt="Original: 30 Days and s.40" class="update-img">
+
+      <p class="sub-label">Updated Content</p>
+      <img src="images/s2_updated.png" alt="Updated: 15 Days and Reg. s.3.1" class="update-img">
+
+      <p class="sub-label">Explanation</p>
+      <p>The <strong>Reporting Change of Info</strong> row in the Reporting Obligations Deadline table has two places that need to be updated:</p>
+      <table>
+        <thead>
+          <tr><th colspan="3" style="text-align:center; background:#d9e1f2;">Reporting Change of Info — Corrections</th></tr>
+          <tr><th>Field</th><th>Was</th><th>Now</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Deadline</td><td><strong>30 Days</strong></td><td><strong>15 calendar days</strong></td></tr>
+          <tr><td>Code</td><td><strong>s.40</strong> (Code of Professional Conduct — "Response to College")</td><td><a href="https://college-ic.ca/ICCRC/Assets/Documents/Regulations/Changes%20in%20Information%20Regulation.pdf"><strong>Reg. s.3.1</strong></a> (Changes in Information Regulation 2021-001)</td></tr>
+        </tbody>
+      </table>
+      <p>The correct authority is <a href="https://college-ic.ca/ICCRC/Assets/Documents/Regulations/Changes%20in%20Information%20Regulation.pdf">Changes in Information Regulation 2021-001, s.3.1</a>, which states: <em>"Every RCIC shall, within fifteen (15) calendar days of an effective change, notify the Council in writing of any changes"</em> to their address, phone number, email, client account details, and more.</p>
+    </div>
+
+    <div class="board" id="update-s3">
+      <h3>Update #s3 — Abuse of Discretion: 3 sub-bullets missing after "such as:"</h3>
+      <p class="entry-meta">Section 2.2 — Administrative Law &nbsp;|&nbsp; Table: Abuse of Discretion &nbsp;|&nbsp; Updated: 2026-08-29</p>
+
+      <p class="sub-label">What Was Missing</p>
+      <p>In the <strong>Abuse of Discretion</strong> flashcard, the last bullet reads "…falls outside the 'range of possible, acceptable outcomes', <strong>such as:</strong>" — but the three sub-bullets that follow were missing from the printed version.</p>
+
+      <p class="sub-label">Correct Content</p>
+      <table>
+        <thead>
+          <tr><th style="text-align:center; background:#FFC000; color:#000;">Abuse of Discretion</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <ul style="margin:6px 0; padding-left:20px;">
+                <li style="margin-bottom:6px;">While signaled by the word 'may' in <em>IRPA/IRPR</em>, this power is not absolute. Officers must exercise discretion reasonably, fairly, and in accordance with the <em>Charter</em> and the Objectives of the Act.</li>
+                <li style="margin-bottom:6px;">Immigration laws give discretion, but administrative law sets the limits. If discretion is misused, it becomes a legal/jurisdictional problem and can be challenged at the Federal Court.</li>
+                <li style="margin-bottom:4px;">Abuse of discretion occurs when the decision-making process falls outside the 'range of possible, acceptable outcomes', such as:
+                  <ul style="margin:6px 0; padding-left:20px; list-style-type:disc;">
+                    <li style="margin-bottom:6px;"><strong>Fettering Discretion</strong>: When an officer follows a policy manual (e.g., OP manuals) as if it were law, refusing to consider the unique facts of the case.</li>
+                    <li style="margin-bottom:6px;"><strong>Irrelevant Factors</strong>: When an officer bases a decision on something not related to the <em>IRPA</em> (e.g., denying a study permit because they personally dislike the applicant's choice of major).</li>
+                    <li><strong>Bad Faith/Improper Purpose</strong>: When an officer acts with bias, dishonesty, or for a purpose not intended by the legislation.</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="board" id="update-s4">
+      <h3>Update #s4 — Common Removal Order Situations: FN Overstaying / Non-compliance → Exclusion Order (not Departure Order)</h3>
+      <p class="entry-meta">Section 3.7 — Removal Orders &nbsp;|&nbsp; Table: Common Removal Order Situations &nbsp;|&nbsp; Updated: 2026-09-01</p>
+
+      <p class="sub-label">Original Content</p>
+      <img src="images/s4_original.png" alt="Original: first row shows Departure Order for overstaying and non-compliance" class="update-img">
+
+      <p class="sub-label">Updated Content</p>
+      <img src="images/s4_updated.png" alt="Updated: table split into separate rows for departure and exclusion orders" class="update-img">
+
+      <p class="sub-label">What Changed</p>
+      <p>
+        The original first row grouped four situations under a single <strong>Departure Order</strong>. Two of those situations are incorrect for foreign nationals:
+        <a href="https://laws-lois.justice.gc.ca/eng/regulations/sor-2002-227/section-228.html">IRPR 228(1)(c)(iv)</a> specifies an <strong>exclusion order</strong> for a foreign national who fails to leave Canada by the end of their authorized period (overstaying), and
+        <a href="https://laws-lois.justice.gc.ca/eng/regulations/sor-2002-227/section-228.html">IRPR 228(1)(c)(v)</a> specifies an <strong>exclusion order</strong> for failing to comply with conditions of temporary residence (including work and study authorization).
+      </p>
+    </div>
+
+    <div class="board" id="update-s5">
+      <h3>Update #s5 — Conditional Removal Order: "effective immediately" → comes into force per IRPA s.49(2)</h3>
+      <p class="entry-meta">Section 2.4 — IRB &nbsp;|&nbsp; Table: Outcome of RPD Decision &nbsp;|&nbsp; Updated: 2026-09-01</p>
+
+      <p class="sub-label">Original Content</p>
+      <img src="images/s5_original.png" alt="Original: order is effective immediately upon the RPD decision" class="update-img">
+
+      <p class="sub-label">Updated Content</p>
+      <img src="images/s5_updated.png" alt="Updated: conditional removal order comes into force per IRPA s.49(2)" class="update-img">
+
+      <p class="sub-label">What Changed</p>
+      <p>
+        "Effective immediately upon the RPD decision" is inaccurate.
+        <a href="https://laws-lois.justice.gc.ca/eng/acts/i-2.5/section-49.html">IRPA s.49(2)</a> sets out when a conditional removal order comes into force — the timing is never immediate upon the RPD decision:
+      </p>
+      <table>
+        <thead>
+          <tr><th>Scenario</th><th>Order comes into force</th><th>Authority</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>RPD rejects — <strong>no right of appeal</strong></td><td>15 days after notice of rejection</td><td>s.49(2)(c)</td></tr>
+          <tr><td>RPD rejects — <strong>appeal right exists, but no appeal filed</strong></td><td>The <em>later</em> of: day after appeal time limit expires, and 15 days after notice of rejection</td><td>s.49(2)(d)</td></tr>
+          <tr><td>RAD dismisses appeal</td><td>15 days after notice of RAD rejection</td><td>s.49(2)(e)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="board" id="update-s6">
+      <h3>Update #s6 — Perfect the Record deadline: 75 Days → 120 Days</h3>
+      <p class="entry-meta"><span class="page-ref"></span> &nbsp;|&nbsp; Section 2.5 — Federal Court (Judicial Review) &nbsp;|&nbsp; Updated: 2026-09-30</p>
+
+      <p class="sub-label">Original Text</p>
+      <img src="images/s6_original.png" alt="Original content showing 75 Days" class="update-img">
+
+      <p class="sub-label">Updated Text</p>
+      <img src="images/s6_updated.png" alt="Updated content showing 120 Days" class="update-img">
+
+      <p class="sub-label">Explanation</p>
+      <p>Effective June 26, 2026, the Federal Court Special Order grants applicants an extension of <strong>90 days</strong> on top of the standard 30-day deadline under Rule 10(1) of the FCCIRPR. The total deadline to perfect an application for leave is therefore <strong>120 days</strong> (30 Days standard + 90-Day Special Order extension). This supersedes the May 2025 Special Order, which had set the total at 75 days.</p>
+      <p>The Court cited an unprecedented caseload — projected to exceed 30,000 immigration filings in 2026 (nearly five times pre-pandemic levels) — as the reason for the further extension.</p>
+      <p>Source: <a href="https://www.fct-cf.ca/Content/assets/pdf/base/2026-08-12-Consolidated-Immigration-Practice-Guidelines.pdf">Federal Court — Consolidated Immigration Practice Guidelines (August 12, 2026)</a></p>
+    </div>
+    <div class="board" id="update-s7">
+      <h3>Update #s7 — eTA Expansion: Remove Qatar from visa-required country examples</h3>
+      <p class="entry-meta"><span class="page-ref"></span> &nbsp;|&nbsp; Section 4.1 — Temporary Resident Visas &amp; eTA &nbsp;|&nbsp; Updated: 2026-10-01</p>
+
+      <p class="sub-label">Original Text</p>
+      <img src="images/s7_original.png" alt="Original content" class="update-img">
+
+      <p class="sub-label">Updated Text</p>
+      <table style="width:100%; border-collapse:collapse; font-size:13px;">
+        <thead>
+          <tr><th style="background:#FFC000; color:#000; padding:8px 12px; text-align:center;">Electronic Travel Authorization (eTA)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td style="border:1px solid #bbb; padding:10px 14px;">
+            <ul style="margin:0; padding-left:20px; line-height:1.8;">
+              <li>The eTA is a digital entry requirement for visa-exempt foreign nationals (excluding U.S. citizens and U.S. Lawful Permanent Residents) who are traveling to or transiting through Canada by air.</li>
+              <li>While it is not required for entry by land (car/bus) or sea (cruise ship), an eTA is mandatory for boarding a flight to Canada and is electronically linked to a traveler's passport.</li>
+              <li>An eTA is typically valid for five years or until the linked passport expires, whichever occurs first.</li>
+              <li>Under the <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta/eligibility/eta-x.html#countries">eTA Expansion program</a>, citizens from select visa-required countries (such as the Philippines, Indonesia, or Malaysia) may qualify for an eTA instead of a TRV if they have held a Canadian visa in the last 10 years or currently hold a valid U.S. non-immigrant visa.</li>
+            </ul>
+          </td></tr>
+        </tbody>
+      </table>
+
+      <p class="sub-label">Explanation</p>
+      <p>Qatar is a visa-exempt country, not a visa-required country.</p>
+    </div>
+
+    <div class="board" id="update-s8">
+      <h3>Update #s8 — SOWP Table: rename "PA" to "Partner"; fix In-Canada Class trigger</h3>
+      <p class="entry-meta"><span class="page-ref"></span> &nbsp;|&nbsp; Section 4.4 — Open Work Permits &nbsp;|&nbsp; Updated: 2026-10-01</p>
+
+      <p class="sub-label">Original Text</p>
+      <img src="images/s8_original.png" alt="Original SOWP table" class="update-img">
+
+      <p class="sub-label">Updated Text</p>
+      <table style="width:100%; border-collapse:collapse; font-size:13px;">
+        <thead>
+          <tr><th colspan="4" style="background:#FFC000; color:#000; text-align:center; padding:8px;">The Spousal Open Work Permit (SOWP)</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="4" style="padding:8px; border:1px solid #bbb;">SOWP lets the spouse or partner (<strong>SOWP applicant</strong>) of an eligible worker, student, or PR applicant (their <strong>Partner</strong>) work in Canada on an open work permit.</td>
+          </tr>
+          <tr style="background:#e0e0e0;">
+            <th style="padding:8px; border:1px solid #bbb;">Partner Category</th>
+            <th style="padding:8px; border:1px solid #bbb;">Partner Requirement</th>
+            <th style="padding:8px; border:1px solid #bbb;">Partner Permit Validity</th>
+            <th style="padding:8px; border:1px solid #bbb; background:#c8d8f0;">Key Restriction</th>
+          </tr>
+          <tr>
+            <td rowspan="2" style="padding:8px; border:1px solid #bbb; text-align:center; background:#f0f0f0;">International Student</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">Doctorate (PhD) or Professional Degree (MD, JD, etc.)</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">Duration of study</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">Must be full-time;<br>No SOWP if in the final term.</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">Master's Degree</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">≥ 16 Months</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">Program duration must be at least 16 months.</td>
+          </tr>
+          <tr>
+            <td rowspan="2" style="padding:8px; border:1px solid #bbb; text-align:center; background:#f0f0f0;">High-Skilled Worker</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">TEER 0 or 1 (All occupations)</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">≥ 16 Months</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">Must be currently employed or have a job offer.</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">TEER 2 or 3 (Select Sectors Only)</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">≥ 16 Months</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">Restricted to Healthcare, STEM, Trade, etc.</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center; background:#f0f0f0;">Low-Skilled Worker</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">TEER 4 or 5</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">≥ 6 Months</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">Only eligible if <strong>Partner</strong> holds a PNP nomination certificate</td>
+          </tr>
+          <tr>
+            <td rowspan="2" style="padding:8px; border:1px solid #bbb; text-align:center; background:#f0f0f0;">PR Applicant</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">In-Canada Class<br>(Spouse/Common-law)</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">——</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">Partner has valid status: AOR received.<br>Partner's status expired: First Stage approval.</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">PNP Nominee (any TEER)</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">——</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">PR application submitted;<br>no AOR required</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="sub-label">Explanation</p>
+      <p>Two updates: "PA" is replaced with "Partner" throughout the table, and the In-Canada Class Key Restriction now correctly shows separate triggers for valid status (AOR) and expired status (First Stage approval).</p>
+    </div>
+    <!-- END_S_ENTRIES -->
+
+    <p class="section-label">Plus Only Updates</p>
+
+    <div class="board plus-only" id="update-p1">
+      <h3>Update #p1 — Q46 Explanation: removal order type corrected from deportation order to exclusion order</h3>
+      <p class="entry-meta">Section 3.9 — EPE Practice Questions &nbsp;|&nbsp; Q46 (Jin) &nbsp;|&nbsp; Updated: 2026-08-31</p>
+
+      <p class="sub-label">Original Text</p>
+      <table>
+        <thead>
+          <tr><th>Option</th><th>Original explanation</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>A</strong></td>
+            <td>"Submitting a Temporary Resident Visa alone is insufficient after a deportation order."</td>
+          </tr>
+          <tr>
+            <td><strong>D</strong></td>
+            <td>"There is no automatic expiration of a deportation order after five years. Unlike an Exclusion Order, which expires after one or two years depending on the case, a deportation order is indefinite unless authorization is granted via ARC."</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="sub-label">Updated Text</p>
+      <table>
+        <thead>
+          <tr><th>Option</th><th>Updated explanation</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>A</strong></td>
+            <td>"Submitting a Temporary Resident Visa alone is insufficient after an exclusion order for misrepresentation."</td>
+          </tr>
+          <tr>
+            <td><strong>D</strong></td>
+            <td>"Under <a href="https://laws-lois.justice.gc.ca/eng/regulations/sor-2002-227/section-225.html">IRPR 225(3)</a>, a misrepresentation exclusion order carries a five-year re-entry bar, so the five-year period in option D is accurate. However, after five years, re-entry is not unconditional: Jin must still obtain a visa or eTA if required and meet all admissibility requirements at the port of entry. Since Jin wants to return now — three years into the five-year bar — the ARC requirement is still active."</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><em>Note: The correct answer (C) remains unchanged. Only the explanation has been updated to more precisely identify the removal order type and the applicable provision.</em></p>
+    </div>
+
+    <div class="board plus-only" id="update-p2">
+      <h3>Update #p2 — Q26 Correct Answer: updated from C to D</h3>
+      <p class="entry-meta">Section 1 — RCIC Professional Practice &nbsp;|&nbsp; MCQ Q26 &nbsp;|&nbsp; Updated: 2026-09-19</p>
+      <p>The correct answer for Q26 was incorrectly listed as C. The correct answer is D. The question and explanation are unchanged.</p>
+      <p><em>Note: The correct answer has been updated from C to D. The question and explanation are unchanged.</em></p>
+    </div>
+
+    <div class="board plus-only" id="update-p3">
+      <h3>Update #p3 — Q68: Fix sentence completion date and Option B threshold</h3>
+      <p class="entry-meta">Section 3.2 — Criminal Inadmissibility &nbsp;|&nbsp; MCQ Q68 &nbsp;|&nbsp; Updated: 2026-10-01</p>
+
+      <p class="sub-label">Original Text</p>
+      <img src="images/p3_original.png" alt="Original Q68" class="update-img">
+
+      <p class="sub-label">Updated Text</p>
+      <div style="background:#fffdf5; border:1px solid #d4c8a0; border-radius:6px; padding:16px 20px; font-size:13px; line-height:1.7;">
+        <p style="margin:0 0 10px 0;">Mr. Alex, a foreign national, was convicted of theft (value of $500) in his home country. The maximum sentence for this offence under Canadian law is 8 years. He served a 6-month prison term and completed his probation on <strong>January 1, 2014</strong>. Since then, he has not committed any other offence. He is now applying for entry into Canada in August 2025. Which of the following best describes Alex's situation regarding deemed rehabilitation?</p>
+        <p style="margin:6px 0;">A. &nbsp;Alex may be deemed rehabilitated because more than 10 years have passed since the offence.</p>
+        <p style="margin:6px 0;">B. &nbsp;Alex may be deemed rehabilitated because more than <strong>10 years</strong> have passed since completion of his sentence, and the Canadian equivalent offence carries a maximum prison term of less than 10 years.</p>
+        <p style="margin:6px 0;">C. &nbsp;Alex cannot be deemed rehabilitated because the maximum sentence for theft in Canada is more than 5 years.</p>
+        <p style="margin:6px 0;">D. &nbsp;Alex must apply for a Temporary Resident Permit (TRP) because deemed rehabilitation is not possible for theft.</p>
+      </div>
+
+      <p class="sub-label">Explanation</p>
+      <p>The sentence completion date and Option B's year threshold are corrected so Option B is now legally accurate. The correct answer remains B.</p>
+      <p><em>Note: The correct answer (B) remains unchanged.</em></p>
+    </div>
+
+    <div class="board plus-only" id="update-p4">
+      <h3>Update #p4 — Q111: Revised question; correct answer updated from B to D</h3>
+      <p class="entry-meta">Section 5.2 — Family Class Sponsorship &nbsp;|&nbsp; MCQ Q111 &nbsp;|&nbsp; Updated: 2026-10-01</p>
+
+      <p class="sub-label">Original Text</p>
+      <img src="images/p4_original.png" alt="Original Q111" class="update-img">
+
+      <p class="sub-label">Updated Text</p>
+      <div style="background:#fffdf5; border:1px solid #d4c8a0; border-radius:6px; padding:16px 20px; font-size:13px; line-height:1.7;">
+        <p style="margin:0 0 10px 0;">Sofia, a Canadian citizen, wants to sponsor her <strong>cousin</strong> under the "1 relative of any age" rule. She has no spouse, children, parents, grandparents, orphaned siblings, nieces, nephews, or grandchildren. Her only other relative is a living aunt who is a Canadian citizen. Can Sofia sponsor her cousin?</p>
+        <p style="margin:6px 0;">A. &nbsp;Yes, because her cousin is considered like a child under sponsorship rules.</p>
+        <p style="margin:6px 0;">B. &nbsp;No, because cousins are not a recognized family class relationship and cannot be sponsored under IRPR.</p>
+        <p style="margin:6px 0;">C. &nbsp;Yes, because she has no spouse, children, or orphaned relatives.</p>
+        <p style="margin:6px 0;">D. &nbsp;No, because the aunt's status as a Canadian citizen blocks the sponsorship.</p>
+      </div>
+
+      <p class="sub-label">Explanation</p>
+      <p>The question is revised so the correct answer is unambiguous: Sofia's living aunt (Canadian citizen) disqualifies her from the Lonely Canadian provision entirely — that is why D is correct. Under IRPR s.117(1)(h), the disqualifying list includes: spouse, child, parent, grandparent, sibling, uncle, aunt, great-uncle, great-aunt.</p>
+      <p><em>Note: The correct answer has been updated from B to D.</em></p>
+    </div>
+
+    <footer>THE EPE CHEATSHEET PLUS &nbsp;·&nbsp; Last updated: 2026-10-01</footer>
+  </div>
+
+</div>
+</body>
+</html>
