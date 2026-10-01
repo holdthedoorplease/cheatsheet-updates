@@ -47,7 +47,7 @@ def update_last_updated(html, date):
 
 docs = Path(__file__).parent
 standard_path = docs / 'en-standard.html'
-plus_src_path  = docs / 'en-only-mcq.html'
+plus_src_path  = docs / 'en-z-mcq.html'
 
 standard = standard_path.read_text(encoding='utf-8')
 plus_src  = plus_src_path.read_text(encoding='utf-8')
@@ -61,7 +61,7 @@ if latest:
         print(f'Updated en-standard.html → Last updated: {latest}')
     if updated_plus_src != plus_src:
         plus_src_path.write_text(updated_plus_src, encoding='utf-8')
-        print(f'Updated en-only-mcq.html → Last updated: {latest}')
+        print(f'Updated en-z-mcq.html → Last updated: {latest}')
     standard = updated_standard
     plus_src  = updated_plus_src
 
