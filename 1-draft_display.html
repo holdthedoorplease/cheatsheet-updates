@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Errata Draft — Display Preview</title>
+<base target="_blank">
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; margin: 0; color: #222; background: #f9f9f9; }
+  .page { display: flex; max-width: 1100px; margin: 40px auto; padding: 0 20px; gap: 0; }
+
+  .sidebar { width: 180px; flex-shrink: 0; position: sticky; top: 40px; align-self: flex-start; padding-right: 20px; }
+  .sidebar h4 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #999; margin: 0 0 8px 0; }
+  .sidebar h4.section { margin-top: 16px; }
+  .sidebar a { display: block; padding: 5px 10px; font-size: 13px; color: #1a3a5c; text-decoration: none; border-left: 3px solid #e0e0e0; margin-bottom: 2px; }
+  .sidebar a:hover { border-left-color: #1a3a5c; background: #eef2f7; }
+  .sidebar a.pending { color: #999; border-left-color: #f0d080; }
+
+  .main { flex: 1; min-width: 0; background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 28px 32px; }
+
+  .draft-banner { background: #fff8e1; border: 1px solid #f0c040; border-radius: 6px; padding: 10px 16px; margin-bottom: 24px; font-size: 13px; color: #7a5a00; }
+  .draft-banner strong { color: #5a4000; }
+
+  h1 { font-size: 20px; color: #1a3a5c; margin: 0 0 4px 0; }
+  .last-updated { font-size: 12px; color: #aaa; margin-bottom: 28px; }
+  .toc { margin-bottom: 28px; }
+  .toc h2 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.07em; color: #999; margin: 0 0 10px 0; border-bottom: 1px solid #eee; padding-bottom: 6px; }
+  .toc h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: #bbb; margin: 14px 0 6px 0; }
+  .toc ul { margin: 0; padding: 0; list-style: none; }
+  .toc li { padding: 4px 0 4px 12px; border-left: 2px solid #e0e0e0; margin-bottom: 2px; }
+  .toc li a { font-size: 13px; color: #1a3a5c; text-decoration: none; }
+  .toc li a:hover { text-decoration: underline; }
+  .toc li.pending a { color: #bbb; }
+  .divider { border: none; border-top: 1px solid #eee; margin: 0 0 24px 0; }
+
+  .board { border: 1px solid #d0d8e4; border-radius: 6px; padding: 22px 26px; margin-bottom: 20px; background: #fafcff; scroll-margin-top: 40px; }
+  .board.plus-only { border-color: #d4c8a0; background: #fffdf5; }
+  .board.pending-item { border-color: #ddd; background: #fafafa; opacity: 0.75; }
+  .board h3 { font-size: 15px; color: #1a3a5c; margin: 0 0 4px 0; }
+  .entry-meta { font-size: 12px; color: #666; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid #dde3eb; }
+  .page-ref { color: #222; font-weight: bold; }
+  .sub-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: #222; font-weight: 600; margin: 20px 0 8px 0; }
+  .sub-label::before { content: "• "; }
+  .update-img { max-width: 100%; border: 1px solid #dde3eb; border-radius: 4px; display: block; }
+  .img-placeholder { max-width: 100%; border: 1px dashed #bbb; border-radius: 4px; padding: 14px 18px; background: #f5f5f5; color: #999; font-size: 12px; font-style: italic; }
+
+  .section-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #999; margin: 28px 0 12px 0; }
+  .pending-notice { background: #fff8e1; border-left: 3px solid #f0c040; padding: 8px 12px; font-size: 13px; color: #7a5a00; margin: 10px 0; }
+
+  p { margin: 10px 0; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; }
+  th, td { border: 1px solid #bbb; padding: 8px 12px; text-align: left; vertical-align: middle; }
+  th { background-color: #f0f0f0; font-weight: bold; }
+  tr:nth-child(even) td { background: #f4f4f4; }
+  td.old { background: #ffeeba; }
+  td.new { background: #d4edda; }
+
+  footer { margin-top: 32px; font-size: 11px; color: #bbb; text-align: right; }
+
+  .title-row { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 4px; }
+  .title-row h1 { margin: 0; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <aside class="sidebar">
+    <h4>Standard Drafts</h4>
+    <a href="#draft-s7" target="_self">Draft #s7</a>
+    <a href="#draft-s8" target="_self">Draft #s8</a>
+    <h4 class="section">Plus Only Drafts</h4>
+    <a href="#draft-p3" target="_self">Draft #p3</a>
+    <a href="#draft-p4" target="_self">Draft #p4</a>
+  </aside>
+
+  <div class="main">
+
+    <div class="title-row">
+      <h1>Errata Draft — Display Preview</h1>
+    </div>
+    <p class="last-updated">Draft batch: 2026-10-01 &nbsp;|&nbsp; 4 items</p>
+
+    <div class="draft-banner">
+      <strong>Draft review file.</strong> These entries are not yet published. Screenshots marked as [PLACEHOLDER] will be replaced after Henry's approval. Discuss one item at a time using <code>2-draft_analysis.html</code>.
+    </div>
+
+    <div class="toc">
+      <h2>Standard Drafts</h2>
+      <ul>
+        <li><a href="#draft-s7" target="_self">Draft #s7 — eTA Expansion: Remove Qatar from example list</a></li>
+        <li><a href="#draft-s8" target="_self">Draft #s8 — SOWP Table (PR Applicant rows): fix In-Canada Class trigger; clarify PNP Nominee</a></li>
+      </ul>
+      <h3>Plus Only Drafts</h3>
+      <ul>
+        <li><a href="#draft-p3" target="_self">Draft #p3 — Q68: Deemed Rehabilitation — no correct answer in current options</a></li>
+        <li><a href="#draft-p4" target="_self">Draft #p4 — Q111: Lonely Canadian Rule — correct answer is D (aunt blocks provision)</a></li>
+      </ul>
+    </div>
+
+    <hr class="divider">
+
+    <p class="section-label">Standard Drafts</p>
+
+    <!-- ============================================================ -->
+    <div class="board" id="draft-s7">
+      <h3>Draft #s7 — eTA Expansion: Remove Qatar from example list</h3>
+      <p class="entry-meta">Section 4.1 — Temporary Resident Visas &amp; eTA &nbsp;|&nbsp; Updated: 2026-10-01</p>
+
+      <p class="sub-label">Original Text</p>
+      <img src="images/s7_original.png" alt="Original content" class="update-img">
+
+      <p class="sub-label">Updated Text</p>
+      <table style="width:100%; border-collapse:collapse; font-size:13px;">
+        <thead>
+          <tr><th style="background:#FFC000; color:#000; padding:8px 12px; text-align:center;">Electronic Travel Authorization (eTA)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td style="border:1px solid #bbb; padding:10px 14px;">
+            <ul style="margin:0; padding-left:20px; line-height:1.8;">
+              <li>The eTA is a digital entry requirement for visa-exempt foreign nationals (excluding U.S. citizens and U.S. Lawful Permanent Residents) who are traveling to or transiting through Canada by air.</li>
+              <li>While it is not required for entry by land (car/bus) or sea (cruise ship), an eTA is mandatory for boarding a flight to Canada and is electronically linked to a traveler's passport.</li>
+              <li>An eTA is typically valid for five years or until the linked passport expires, whichever occurs first.</li>
+              <li>Under the <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta/eligibility/eta-x.html#countries" style="background:#FF6B6B; padding:1px 3px;">eTA Expansion program</a>, citizens from select visa-required countries (such as the Philippines, <span style="text-decoration:line-through; background:#FF6B6B; padding:1px 3px;">Qatar,</span> Indonesia, or Malaysia) may qualify for an eTA instead of a TRV if they have held a Canadian visa in the last 10 years or currently hold a valid U.S. non-immigrant visa.</li>
+            </ul>
+          </td></tr>
+        </tbody>
+      </table>
+
+      <p class="sub-label">Explanation</p>
+      <p>Qatar is a visa-exempt country, not a visa-required country.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="board" id="draft-s8">
+      <h3>Draft #s8 — SOWP Table: rename "PA" → "Partner"; fix In-Canada Class trigger</h3>
+      <p class="entry-meta">Section 4.4 — Open Work Permits &nbsp;|&nbsp; SOWP table &nbsp;|&nbsp; Updated: 2026-10-01</p>
+
+      <p class="sub-label">Original Text</p>
+      <img src="images/s8_original.png" alt="Original SOWP table" class="update-img">
+
+      <p class="sub-label">Updated Text</p>
+      <table style="width:100%; border-collapse:collapse; font-size:13px;">
+        <thead>
+          <tr><th colspan="4" style="background:#FFC000; color:#000; text-align:center; padding:8px;">The Spousal Open Work Permit (SOWP)</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="4" style="padding:8px; border:1px solid #bbb;">SOWP lets the spouse or partner (<strong>SOWP applicant</strong>) of an eligible worker, student, or PR applicant (their <strong>Partner</strong>) work in Canada on an open work permit.</td>
+          </tr>
+          <tr style="background:#e0e0e0;">
+            <th style="padding:8px; border:1px solid #bbb;">Partner Category</th>
+            <th style="padding:8px; border:1px solid #bbb;">Partner Requirement</th>
+            <th style="padding:8px; border:1px solid #bbb;">Partner Permit Validity</th>
+            <th style="padding:8px; border:1px solid #bbb; background:#c8d8f0;">Key Restriction</th>
+          </tr>
+          <tr>
+            <td rowspan="2" style="padding:8px; border:1px solid #bbb; text-align:center; background:#f0f0f0;">International Student</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">Doctorate (PhD) or Professional Degree (MD, JD, etc.)</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">Duration of study</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">Must be full-time;<br>No SOWP if in the final term.</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">Master's Degree</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">≥ 16 Months</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">Program duration must be at least 16 months.</td>
+          </tr>
+          <tr>
+            <td rowspan="2" style="padding:8px; border:1px solid #bbb; text-align:center; background:#f0f0f0;">High-Skilled Worker</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">TEER 0 or 1 (All occupations)</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">≥ 16 Months</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">Must be currently employed or have a job offer.</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">TEER 2 or 3 (Select Sectors Only)</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">≥ 16 Months</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">Restricted to Healthcare, STEM, Trade, etc.</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center; background:#f0f0f0;">Low-Skilled Worker</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">TEER 4 or 5</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">≥ 6 Months</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">Only eligible if <strong>Partner</strong> holds a PNP nomination certificate</td>
+          </tr>
+          <tr>
+            <td rowspan="2" style="padding:8px; border:1px solid #bbb; text-align:center; background:#f0f0f0;">PR Applicant</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">In-Canada Class<br>(Spouse/Common-law)</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">——</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center; background:#FF6B6B;">Partner has valid status: AOR received.<br>Partner's status expired: First Stage approval.</td>
+          </tr>
+          <tr>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">PNP Nominee (any TEER)</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">——</td>
+            <td style="padding:8px; border:1px solid #bbb; text-align:center;">PR application submitted;<br>no AOR required</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="sub-label">Explanation</p>
+      <p>Two updates: "PA" is replaced with "Partner" throughout the table, and the In-Canada Class Key Restriction now correctly shows separate triggers for valid status (AOR) and expired status (First Stage approval).</p>
+    </div>
+
+    <p class="section-label">Plus Only Drafts</p>
+
+    <!-- ============================================================ -->
+    <div class="board plus-only" id="draft-p3">
+      <h3>Draft #p3 — Q68: Fix sentence completion date (2017 → 2014) and Option B threshold (8 → 10 years)</h3>
+      <p class="entry-meta">Section 3.2 — Rehabilitation &amp; Inadmissibility &nbsp;|&nbsp; MCQ Q68 &nbsp;|&nbsp; Updated: 2026-10-01</p>
+
+      <p class="sub-label">Original Text</p>
+      <img src="images/p3_original.png" alt="Original Q68" class="update-img">
+
+      <p class="sub-label">Updated Text</p>
+      <div style="background:#f0f6ff; border:1px solid #d0d8e4; border-radius:6px; padding:16px 20px; font-size:13px; line-height:1.7;">
+        <p style="margin:0 0 10px 0;">Mr. Alex, a foreign national, was convicted of theft (value of $500) in his home country. The maximum sentence for this offence under Canadian law is 8 years. He served a 6-month prison term and completed his probation on <strong style="background:#FF6B6B; padding:1px 4px; border-radius:2px;">January 1, 2014</strong>. Since then, he has not committed any other offence. He is now applying for entry into Canada in August 2025. Which of the following best describes Alex's situation regarding deemed rehabilitation?</p>
+        <p style="margin:6px 0;">A. &nbsp;Alex may be deemed rehabilitated because more than 10 years have passed since the offence.</p>
+        <p style="margin:6px 0;">B. &nbsp;Alex may be deemed rehabilitated because more than <span style="background:#FF6B6B; padding:1px 4px; border-radius:2px;">10 years</span> have passed since completion of his sentence, and the Canadian equivalent offence carries a maximum prison term of less than 10 years.</p>
+        <p style="margin:6px 0;">C. &nbsp;Alex cannot be deemed rehabilitated because the maximum sentence for theft in Canada is more than 5 years.</p>
+        <p style="margin:6px 0;">D. &nbsp;Alex must apply for a Temporary Resident Permit (TRP) because deemed rehabilitation is not possible for theft.</p>
+      </div>
+
+      <p class="sub-label">Explanation</p>
+      <p>The sentence completion date and Option B's year threshold are corrected so Option B is now legally accurate. The correct answer remains B.</p>
+      <p><em>Note: The correct answer (B) remains unchanged.</em></p>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="board plus-only" id="draft-p4">
+      <h3>Draft #p4 — Q111: Revised question (godson → cousin); correct answer D</h3>
+      <p class="entry-meta">Section 5.2 — Sponsorship — Family Class &nbsp;|&nbsp; MCQ Q111 &nbsp;|&nbsp; Updated: 2026-10-01</p>
+
+      <p class="sub-label">Original Text</p>
+      <img src="images/p4_original.png" alt="Original Q111" class="update-img">
+
+      <p class="sub-label">Updated Text</p>
+      <div style="background:#f0f6ff; border:1px solid #d0d8e4; border-radius:6px; padding:16px 20px; font-size:13px; line-height:1.7;">
+        <p style="margin:0 0 10px 0;">Sofia, a Canadian citizen, wants to sponsor her <strong style="background:#FF6B6B; padding:1px 4px; border-radius:2px;">cousin</strong> under the "1 relative of any age" rule. She has no spouse, children, parents, grandparents, orphaned siblings, nieces, nephews, or grandchildren. Her only other relative is a living aunt who is a Canadian citizen. Can Sofia sponsor her <strong style="background:#FF6B6B; padding:1px 4px; border-radius:2px;">cousin</strong>?</p>
+        <p style="margin:6px 0;">A. &nbsp;Yes, because her cousin is considered like a child under sponsorship rules.</p>
+        <p style="margin:6px 0;"><strong style="background:#FF6B6B; padding:1px 4px; border-radius:2px;">B. &nbsp;No, because cousins are not a recognized family class relationship and cannot be sponsored under IRPR.</strong></p>
+        <p style="margin:6px 0;">C. &nbsp;Yes, because she has no spouse, children, or orphaned relatives.</p>
+        <p style="margin:6px 0;">D. &nbsp;No, because the aunt's status as a Canadian citizen blocks the sponsorship.</p>
+      </div>
+
+      <p class="sub-label">Explanation</p>
+      <p>The question is revised so the correct answer is unambiguous: Sofia's living aunt (Canadian citizen) disqualifies her from the Lonely Canadian provision entirely — that is why D is correct. Under IRPR s.117(1)(h), the disqualifying list includes: spouse, child, parent, grandparent, sibling, uncle, aunt, great-uncle, great-aunt.</p>
+      <p><em>Note: The correct answer has been updated from B to D.</em></p>
+    </div>
+
+    <footer>Draft batch 2026-10-01 &nbsp;·&nbsp; For Henry's review only — not published</footer>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Errata Edit Plan — Source File Reference</title>
+<style>
+  body { font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; max-width: 960px; margin: 40px auto; padding: 0 20px; color: #222; }
+  h1 { font-size: 20px; border-bottom: 2px solid #0070C0; padding-bottom: 8px; }
+  h2 { font-size: 16px; color: #0070C0; margin-top: 36px; border-left: 4px solid #0070C0; padding-left: 10px; }
+  h3 { font-size: 13px; color: #555; text-transform: uppercase; letter-spacing: 0.06em; margin: 20px 0 6px 0; }
+  table { border-collapse: collapse; width: 100%; margin: 10px 0 18px 0; }
+  th { background: #0070C0; color: white; padding: 6px 10px; text-align: left; font-size: 13px; }
+  td { padding: 6px 10px; border: 1px solid #ccc; font-size: 13px; vertical-align: top; }
+  .old { background: #ffeeba; }
+  .new { background: #d4edda; }
+  .note { background: #f0f4f9; border-left: 3px solid #0070C0; padding: 8px 12px; margin: 10px 0; font-size: 13px; }
+  .warn { background: #fff3cd; border-left: 3px solid #f0c040; padding: 8px 12px; margin: 10px 0; font-size: 13px; }
+  code { background: #f4f4f4; padding: 1px 5px; border-radius: 3px; font-family: monospace; font-size: 12px; }
+  .file-path { font-family: monospace; font-size: 12px; color: #444; background: #f4f4f4; padding: 3px 8px; border-radius: 3px; display: inline-block; margin-bottom: 6px; }
+  .propagate { font-size: 12px; color: #666; margin-top: 6px; }
+</style>
+</head>
+<body>
+
+<h1>Errata Edit Plan — Source File Reference (2026-10-01)</h1>
+<p>Four entries: s7, s8, p3, p4. This file records the exact edits to make in each source file. Read <code>1-draft_display.html</code> for the reader-facing result.</p>
+
+<!-- ============================================================ -->
+<h2>s7 — eTA Expansion: Remove Qatar from example list</h2>
+
+<span class="file-path">A-Standard_version/A0-chapters/04-temporary-residence/4.1-temporary-resident-visa-trv.md</span>
+
+<h3>Change 1 — Remove Qatar from the eTA expansion example countries</h3>
+<table>
+  <tr><th>Find</th><th>Replace with</th></tr>
+  <tr>
+    <td class="old">citizens from select visa-required countries (such as the Philippines, Qatar, Indonesia, or Malaysia)</td>
+    <td class="new">citizens from select visa-required countries (such as the Philippines, Indonesia, or Malaysia)</td>
+  </tr>
+</table>
+
+<h3>Change 2 — Add hyperlink to "eTA Expansion program" in the same bullet</h3>
+<div class="note">Wrap the text "Under the eTA Expansion program" (or equivalent phrasing in the bullet) with a hyperlink to:<br>
+<code>https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta/eligibility/eta-x.html#countries</code><br>
+The link goes on the phrase in the table cell, not in any explanation or note.</div>
+
+<div class="note">Do NOT add Qatar to the visa-exempt examples list. Do NOT add new example countries to any other bullet. Only remove Qatar from the visa-required expansion list and add the hyperlink.</div>
+
+<!-- ============================================================ -->
+<h2>s8 — SOWP Table: rename "PA" → "Partner"; fix In-Canada Class Key Restriction</h2>
+
+<span class="file-path">A-Standard_version/A0-chapters/04-temporary-residence/4.4-work-permit.md</span>
+<p class="propagate">Applies to the SOWP table section (approx. lines 1495–1665).</p>
+
+<h3>Change 1 — Rename "PA" to "Partner" throughout the SOWP table</h3>
+<table>
+  <tr><th>Location</th><th>Find</th><th>Replace with</th></tr>
+  <tr>
+    <td>Intro sentence</td>
+    <td class="old">SOWP allows spouses or common-law partners of certain foreign workers, international students, or PR applicants (the PA) to work…</td>
+    <td class="new">SOWP lets the spouse or partner (<strong>SOWP applicant</strong>) of an eligible worker, student, or PR applicant (their <strong>Partner</strong>) work in Canada on an open work permit.</td>
+  </tr>
+  <tr>
+    <td>Column header</td>
+    <td class="old">PA Requirement</td>
+    <td class="new">Partner Requirement</td>
+  </tr>
+  <tr>
+    <td>Column header</td>
+    <td class="old">PA Permit Validity</td>
+    <td class="new">Partner Permit Validity</td>
+  </tr>
+  <tr>
+    <td>Low-Skilled Worker row, Key Restriction</td>
+    <td class="old">Only eligible if PA holds a PNP nomination certificate</td>
+    <td class="new">Only eligible if <strong>Partner</strong> holds a PNP nomination certificate</td>
+  </tr>
+</table>
+
+<h3>Change 2 — Fix In-Canada Class Key Restriction</h3>
+<table>
+  <tr><th>Row</th><th>Find (Key Restriction cell)</th><th>Replace with</th></tr>
+  <tr>
+    <td>PR Applicant — In-Canada Class (Spouse/Common-law)</td>
+    <td class="old">Must have "First Stage" approval.</td>
+    <td class="new">Partner has valid status: AOR received.<br>Partner's status expired: First Stage approval.</td>
+  </tr>
+</table>
+
+<h3>Change 3 — PR Applicant rows, Partner Permit Validity</h3>
+<table>
+  <tr><th>Row</th><th>Current value</th><th>New value</th></tr>
+  <tr>
+    <td>In-Canada Class (Spouse/Common-law)</td>
+    <td class="old">Valid status (or similar)</td>
+    <td class="new">——</td>
+  </tr>
+  <tr>
+    <td>PNP Nominee (any TEER)</td>
+    <td class="old">Until PR decision (or similar)</td>
+    <td class="new">——</td>
+  </tr>
+</table>
+
+<div class="note">The PNP Nominee Key Restriction cell stays as-is: "PR application submitted; no AOR required."</div>
+
+<!-- ============================================================ -->
+<h2>p3 — Q68: Fix sentence completion date (2017 → 2014) and Option B threshold (8 → 10 years)</h2>
+
+<p>Correct answer stays <strong>B</strong>. Two source-level errors; must fix source first, then propagate.</p>
+
+<h3>Step 1 — Fix source file</h3>
+<span class="file-path">B-Plus_version/B1-mcq_sources/bravo.json</span><br>
+<span style="font-size:12px; color:#555;">Find entry with <code>"question_number": "bravo_94"</code></span>
+
+<table>
+  <tr><th>Field</th><th>Find</th><th>Replace with</th></tr>
+  <tr>
+    <td>Question stem</td>
+    <td class="old">…completed his probation on January 1, 2017…</td>
+    <td class="new">…completed his probation on January 1, 2014…</td>
+  </tr>
+  <tr>
+    <td>Option B text</td>
+    <td class="old">…more than 8 years have passed since completion of his sentence…</td>
+    <td class="new">…more than 10 years have passed since completion of his sentence…</td>
+  </tr>
+  <tr>
+    <td>Explanation</td>
+    <td class="old">…more than 8 years have passed since Jan 2017, therefore he may be deemed rehabilitated… (and any claim that the offence is "most likely a summary offence")</td>
+    <td class="new">Theft under $5,000 (CC s.334(b)) is a hybrid offence; under IRPA s.36(3)(a) it is treated as indictable. For a single non-serious indictable (max &lt; 10 yrs), deemed rehabilitation requires 10 years from sentence completion (IRPR s.18(2)(a)). Completion: Jan 1, 2014. By August 2025, ~11.5 years have elapsed → threshold met → B is correct.</td>
+  </tr>
+</table>
+
+<div class="warn">The <code>correct_answer</code> field in bravo.json is always <code>null</code> — do not set it here.</div>
+
+<h3>Step 2 — Propagate to mcqdepartment.json</h3>
+<span class="file-path">B-Plus_version/B0-chapters/mcqdepartment.json</span><br>
+<span style="font-size:12px; color:#555;">Find entry for Q68 (bravo_94). The <code>correct_answer</code> is currently <code>"B"</code> — leave it as <code>"B"</code>. No change needed here after fixing the source explanation.</span>
+
+<h3>Step 3 — Propagate to compiled files</h3>
+<span class="file-path">B-Plus_version/B0-chapters/answers-explanations.md</span><br>
+Update the explanation for Q68 to match the corrected source text above.
+
+<div class="note">After editing source files, run the MCQ build pipeline to regenerate B0-chapters/ compiled files.</div>
+
+<!-- ============================================================ -->
+<h2>p4 — Q111: Revised question (godson → cousin); correct answer B → D</h2>
+
+<p>The question is revised so that D is the sole unambiguous correct answer. Source-level fix required.</p>
+
+<h3>Step 1 — Fix source file</h3>
+<span class="file-path">B-Plus_version/B1-mcq_sources/charlie.json</span><br>
+<span style="font-size:12px; color:#555;">Find entry with <code>"question_number": "charlie_23"</code></span>
+
+<table>
+  <tr><th>Field</th><th>Find</th><th>Replace with</th></tr>
+  <tr>
+    <td>Question stem (all occurrences of "godson")</td>
+    <td class="old">godson</td>
+    <td class="new">cousin</td>
+  </tr>
+  <tr>
+    <td>Option B text</td>
+    <td class="old">No, because godsons are not related by blood or adoption (or similar)</td>
+    <td class="new">No, because cousins are not a recognized family class relationship and cannot be sponsored under IRPR.</td>
+  </tr>
+  <tr>
+    <td>Option A text</td>
+    <td class="old">Yes, because godson = child under sponsorship rules (or similar)</td>
+    <td class="new">Yes, because a cousin is a legal relative and she has no spouse or children who are Canadian citizens or PRs.</td>
+  </tr>
+  <tr>
+    <td>Explanation</td>
+    <td class="old">D is misleading; while the aunt exists, the main reason is the lack of legal relationship (or similar wrong reasoning)</td>
+    <td class="new">A cousin is a legal blood relative and can be sponsored under IRPR s.117(1)(h) — so B (no legal relationship) no longer applies. However, Sofia has a living aunt who is a Canadian citizen. Under IRPR s.117(1)(h), the Lonely Canadian provision requires the sponsor to have NO living relative (including uncle/aunt) who is a Canadian citizen or PR. The aunt disqualifies Sofia from using the provision entirely → D is correct.</td>
+  </tr>
+</table>
+
+<div class="warn">The <code>correct_answer</code> field in charlie.json is always <code>null</code> — do not set it here.</div>
+
+<h3>Step 2 — Update correct_answer in mcqdepartment.json</h3>
+<span class="file-path">B-Plus_version/B0-chapters/mcqdepartment.json</span><br>
+Find entry for Q111 (charlie_23). Change <code>correct_answer</code> from <code>"B"</code> to <code>"D"</code>.
+
+<h3>Step 3 — Propagate to compiled files</h3>
+<span class="file-path">B-Plus_version/B0-chapters/answers-explanations.md</span><br>
+Update the answer key entry for Q111: correct answer D, revised explanation matching the source above.
+
+<div class="note">After editing source files, run the MCQ build pipeline to regenerate B0-chapters/ compiled files.</div>
+
+</body>
+</html>
