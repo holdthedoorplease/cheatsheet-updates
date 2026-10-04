@@ -50,6 +50,15 @@
   tr:nth-child(even) td { background: #f4f4f4; }
 
   footer { margin-top: 32px; font-size: 11px; color: #bbb; text-align: right; }
+
+  @media (max-width: 680px) {
+    .page { flex-direction: column; margin: 0; padding: 0; }
+    .sidebar { display: none; }
+    .main { border-radius: 0; border-left: none; border-right: none; padding: 16px; }
+    h1 { font-size: 17px; }
+    .board { padding: 14px 16px; }
+    th, td { padding: 6px 8px; font-size: 13px; }
+  }
 </style>
 </head>
 <body>

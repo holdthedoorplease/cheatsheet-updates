@@ -49,6 +49,17 @@
   .contact-btn { flex-shrink: 0; margin-left: 16px; padding: 6px 14px; font-size: 12px; font-weight: 600; color: #1a3a5c; background: #fff; border: 1.5px solid #1a3a5c; border-radius: 5px; text-decoration: none; white-space: nowrap; line-height: 1.4; }
   .contact-btn:hover { background: #eef2f7; }
   .book-logo { float: right; width: 58%; height: auto; object-fit: contain; margin-right: -3%; margin-top: -4%; }
+
+  @media (max-width: 680px) {
+    .page { flex-direction: column; margin: 0; padding: 0; }
+    .sidebar { display: none; }
+    .main { border-radius: 0; border-left: none; border-right: none; padding: 16px; }
+    h1 { font-size: 17px; }
+    .board { padding: 14px 16px; }
+    .title-row { flex-wrap: wrap; gap: 8px; }
+    .book-logo { float: none; width: 55%; margin: 12px auto 0; display: block; }
+    th, td { padding: 6px 8px; font-size: 13px; }
+  }
 </style>
 </head>
 <body>
